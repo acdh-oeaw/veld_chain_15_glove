@@ -1,0 +1,17 @@
+x-veld:
+  chain:
+
+services:
+  veld_train:
+    extends:
+      file: ./veld_executable_17_glove/veld_train.yaml
+      service: veld_train
+    volumes:
+      - ./data/training_data/:/veld/input/
+      - ./data/models/:/veld/output/
+    environment:
+      CORPUS: "/veld/input/text8"
+      VOCAB_FILE: "/veld/output/vocab.txt"
+      COOCCURRENCE_FILE: "/veld/output/cooccurrence.bin"
+      COOCCURRENCE_SHUF_FILE: "/veld/output/cooccurrence.shuf.bin"
+      SAVE_FILE: "/veld/output/vectors"
