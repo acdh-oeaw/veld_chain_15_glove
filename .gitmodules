@@ -1,0 +1,3 @@
+[submodule "veld_executable_17_glove"]
+	path = veld_executable_17_glove
+	url = https://github.com/acdh-oeaw/veld_executable_17_glove.git
