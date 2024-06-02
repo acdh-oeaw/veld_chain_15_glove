@@ -1,0 +1,16 @@
+x-veld:
+  chain:
+
+services:
+  veld_eval:
+    extends:
+      file: ./veld_executable_17_glove/veld_eval.yaml
+      service: veld_eval
+    volumes:
+      - ./data/models/:/veld/input/1/
+      - ./veld_executable_17_glove/:/veld/input/2/
+    environment:
+      VOCAB_FILE: "/veld/input/1/vocab.txt"
+      VECTOR_FILE: "/veld/input/1/vectors.txt"
+      EVAL_FOLDER: "/veld/input/2/src/glove/eval/question-data/"
+
