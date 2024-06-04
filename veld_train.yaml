@@ -4,7 +4,7 @@ x-veld:
 services:
   veld_train:
     extends:
-      file: ./veld_executable_17_glove/veld_train.yaml
+      file: ./veld_code_17_glove/veld_train.yaml
       service: veld_train
     volumes:
       - ./data/training_data/:/veld/input/
