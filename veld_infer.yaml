@@ -1,0 +1,13 @@
+x-veld:
+  chain:
+
+services:
+  veld_infer:
+    extends:
+      file: ./veld_code_17_glove/veld_infer.yaml
+      service: veld_infer
+    volumes:
+      - ./data/models/:/veld/input/
+    environment:
+      VECTOR_FILE: "/veld/input/vectors.txt"
+
