@@ -7,7 +7,7 @@ services:
       file: ./veld_code_17_glove/veld_infer.yaml
       service: veld_infer
     volumes:
-      - ./data/models/:/veld/input/
+      - ./veld_data_17_glove_models/:/veld/input/
     environment:
-      VECTOR_FILE: "/veld/input/vectors.txt"
+      VECTOR_FILE: "/veld/input/data/m1/vectors.txt"
 
