@@ -11,12 +11,12 @@ services:
       file: ./veld_code_17_glove/veld_train.yaml
       service: veld_train
     volumes:
-      - ./data/training_data/:/veld/input/
-      - ./data/models/:/veld/output/
+      - ./veld_data_9_we_training_data/:/veld/input/
+      - ./veld_data_17_glove_models/:/veld/output/
     environment:
-      CORPUS: "/veld/input/text8"
-      VOCAB_FILE: "/veld/output/vocab.txt"
-      COOCCURRENCE_FILE: "/veld/output/cooccurrence.bin"
-      COOCCURRENCE_SHUF_FILE: "/veld/output/cooccurrence.shuf.bin"
-      VECTOR_FILE: "/veld/output/vectors"
+      CORPUS: "/veld/input/data/dewiki.txt"
+      VOCAB_FILE: "/veld/output/data/m1/vocab.txt"
+      COOCCURRENCE_FILE: "/veld/output/data/m1/cooccurrence.bin"
+      COOCCURRENCE_SHUF_FILE: "/veld/output/data/m1/cooccurrence.shuf.bin"
+      VECTOR_FILE: "/veld/output/data/m1/vectors"
 
