@@ -4,3 +4,6 @@
 [submodule "veld_data_9_we_training_data"]
 	path = veld_data_9_we_training_data
 	url = https://gitlab.oeaw.ac.at/acdh-ch/nlp/veld_data_9_we_training_data.git
+[submodule "veld_data_17_glove_models"]
+	path = veld_data_17_glove_models
+	url = https://gitlab.oeaw.ac.at/acdh-ch/nlp/veld_data_17_glove_models.git
