@@ -1,9 +1,11 @@
 x-veld:
   chain:
-    # TODO
     about:
-      description:
+      description: "Trainings setup using glove on amc data"
       topics:
+        - "NLP"
+        - "Machine learning"
+        - "word embeddings"
 
 services:
   veld_train:
@@ -11,12 +13,12 @@ services:
       file: ./veld_code_17_glove/veld_train.yaml
       service: veld_train
     volumes:
-      - ./veld_data_9_we_training_data/:/veld/input/
-      - ./veld_data_17_glove_models/:/veld/output/
+      - ./veld_data_9_we_training_data/data/:/veld/input/
+      - ./veld_data_17_glove_models/data/m1/:/veld/output/
     environment:
-      CORPUS: "/veld/input/data/dewiki.txt"
-      VOCAB_FILE: "/veld/output/data/m1/vocab.txt"
-      COOCCURRENCE_FILE: "/veld/output/data/m1/cooccurrence.bin"
-      COOCCURRENCE_SHUF_FILE: "/veld/output/data/m1/cooccurrence.shuf.bin"
-      VECTOR_FILE: "/veld/output/data/m1/vectors"
+      in_corpus: "dewiki.txt"
+      out_vocab_file: "vocab.txt"
+      out_cooccurrence_file: "cooccurrence.bin"
+      out_cooccurrence_shuf_file: "cooccurrence.shuf.bin"
+      out_vector_file: "vectors"
 
