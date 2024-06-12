@@ -16,7 +16,7 @@ services:
       - ./veld_data_9_we_training_data/data/:/veld/input/
       - ./veld_data_17_glove_models/data/m1/:/veld/output/
     environment:
-      in_corpus: "dewiki.txt"
+      in_corpus_file: "dewiki.txt"
       out_vocab_file: "vocab.txt"
       out_cooccurrence_file: "cooccurrence.bin"
       out_cooccurrence_shuf_file: "cooccurrence.shuf.bin"
